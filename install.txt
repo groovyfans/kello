@@ -1,0 +1,55 @@
+Kello Install
+-------------------------------------------
+1 文件目录说明
+
+kello-x.x-bin.zip
+其中，x.x是版本号。
+使用WinRAR或者7-Zip等解压缩软件，解压至某个文件夹下面。
+ |
+ |_____database
+           |
+           |_____kello_mysql.sql // 数据库脚本文件
+ |
+ |_____install.txt   // 安装说明
+ |
+ |_____kello-x.x.war // 安装程序
+ |
+ |_____readme.txt    // 说明文件
+
+2 运行环境
+ 1) Java版本1.5以上
+ 2) Tomcat 5.5.x
+ 3) MySQL 5.0
+ 4) Firefox 3，或者Google Chrome
+
+3 数据库
+ 1) 创建数据库及用户帐号
+  >CREATE database kello DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+  >GRANT ALL ON kello.* to rain@'%' IDENTIFIED BY 'username';
+  >GRANT ALL ON kello.* to rain@'localhost' IDENTIFIED BY 'password';
+  说明：
+      数据库名：kello
+      用户名：username
+      密码：password
+  可修改。
+
+4 安装部署
+ 1) 解压kello-x.x.war至kello目录下
+ 2) 使用记事本程序打开目录/WEB-INF/classes下的kello-config.properties
+ 3) 修改下面配置项，数据库地址，用户名及密码
+    jdbc.url=jdbc\:mysql\://localhost\:3306/kello_dev
+    jdbc.driverClassName=com.mysql.jdbc.Driver
+    jdbc.username=rain
+    jdbc.password=rain
+ 4) 修改完毕，保存。
+ 5) 上传kello目录下面所有文件到服务器。
+ 6) 重启服务器。
+
+
+5 运行
+ 1) 打开浏览器，http://localhost:8080/kello
+ 2) 后台地址: http://localhost:8080/kello/login
+    初始帐号: admin/admin
+
+rain
+2009-5-12

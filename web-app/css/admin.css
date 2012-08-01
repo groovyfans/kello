@@ -1,0 +1,684 @@
+/* ----- BASICS ELEMENTS ------------------------------------------------------------------------------------------------- */
+* {
+    margin : 0;
+    padding : 0;
+}
+
+body, div, p, td, th {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 100%;
+    font-size: 10pt;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eff4f9;
+    color: #303030;
+}
+
+p {
+    background-color: #FFFFFF;
+}
+img {
+    border : 0;
+}
+
+a:link {
+    color: #2650A6;
+    text-decoration: underline;
+}
+a:hover {
+    color: #FF6600;
+    font-style: normal;
+    text-decoration: none;
+}
+a:visited {
+    color: #2650A6;
+    text-decoration: none;
+}
+a:active {
+    color: #ff0000;
+    text-decoration: none;
+}
+td a:link {
+    color: #2650A6;
+    text-decoration: none;
+}
+div { border : 0px solid #f00;}
+/* ----- LAYOUT ------------------------------------------------------------------------------------------------------ */
+#contaner {
+
+}
+#content {
+    width : 100%;
+    float : left;
+}
+
+#main {
+    background-color: #fff;
+    color : #000;
+    margin-top : 10px;
+    padding-left : 10px;
+    padding-right : 10px;
+    padding-bottom : 30px;
+
+    width : 98%!important;
+
+    width : 100%;
+	min-height : 450px;
+}
+#header {
+    float: left;
+    height : 48px;
+	width: 100%;
+	background : #fff url("../images/admin/header-bg.gif") repeat-x top left;
+}
+#header-logo {
+    float: left;
+    height : 48px;
+	width: 164px;
+}
+#header-title {
+    float: left;
+    height : 48px;
+	width: 300px;
+}
+#banner {
+    height : 50px;
+	width: 464px;
+}
+#version {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#tabs {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+#tabs .tabheading {
+
+}
+#tabs ul {
+    padding : 0 20px 0 0;
+    float : left;
+}
+#tabs li {
+    display : inline;
+    font-family : verdana;
+    font-size : 8pt;
+    font-weight : bold;
+    padding : 0 0 0 10px;
+}
+#tabs li a {
+    color : #FFFFFF;
+    text-decoration : none;
+}
+#tabs li a:hover {
+    color : #FF6600;
+    text-decoration : underline;
+}
+
+#scroll {
+    background : #fff url("../images/admin/scroll_bg.gif") repeat-y top left;
+    width : 8px;
+    height : 100%;
+}
+
+#scroll span {
+    display : none;
+}
+
+#scroll a {
+    background : #fff url("../images/admin/scroll_hide.gif") no-repeat center;
+    width : 8px;
+    height : 15px;
+    position : absolute;
+    top : 40%;
+    display : block;
+    text-align : center;
+	outline: none;
+}
+#scroll a.arrowright {
+    background : #fff url("../images/admin/scroll_show.gif") no-repeat center;
+}
+.pageTitle {
+    background: #98b1c4;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.pageTitleSeparator {
+    background-color: #000000;
+    padding: 0px;
+}
+.overview {
+    font-family: arial, helvetica, sans-serif, kanji2;
+    font-size: 10pt;
+    font-weight: normal;
+    width: 98%!important;
+    width : 100%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-top: 10px;
+}
+.breadcrumbs {
+    background-color : #C9E8FF;
+    color : #000;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    border : 1px #9ACCE9 solid;
+    border-left : 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-top: 4px;
+    text-decoration: none;
+}
+.breadcrumbs a 
+{
+    background-color : #C9E8FF;
+    color : #000;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#sidebar {
+	height : 480px;
+	background-color : #CCE9F0;
+}
+
+.arrowlistmenu{
+	width: 149px; /*width of accordion menu*/
+}
+
+.arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+	font: bold 14px Arial;
+	color: #fff;
+	background: #fff url("../images/admin/glossyback.gif") repeat-x bottom left;
+	margin-bottom: 0px; /*bottom spacing between header and rest of content*/
+	text-transform: uppercase;
+	padding: 4px 0 4px 10px; /*header text is indented 10px*/
+	cursor: hand;
+}
+
+.arrowlistmenu .menuheader .statusicon{ /*CSS for icon image that gets dynamically added to headers*/
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border: none;
+}
+.arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+	background-image: url("../images/admin/titlebar-active.gif");
+}
+
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0px; /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+	background-color: #CCE9F0;
+}
+
+.arrowlistmenu ul li a{
+	color: #000;
+	background: url("../images/admin/bullet-b.gif") no-repeat center left; /*custom bullet list image*/
+	display: block;
+	padding: 4px 0;
+	padding-left: 20px; /*link text is indented 19px*/
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #dadada;
+	font-size: 90%;
+}
+
+.arrowlistmenu ul li a:visited{
+	color: #000;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+	color: #f00;
+	background: url("../images/admin/bullet-r.gif") no-repeat center left;
+	font-size: 90%;
+}
+
+.arrowlistmenu ul li.selected a { 
+	color: #f00;
+	background: url("../images/admin/bullet-r.gif") no-repeat center left;
+	font-size: 90%;
+}
+
+
+.section {
+    padding-top : 10px;
+    padding-bottom : 10px;
+    clear : both;
+}
+.sectionHeading {
+    background-color: #99CCFF;
+    color: #fff;
+    cursor: hand;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-top: 4px;
+    text-decoration: none;
+}
+.sectionHeadingClosed {
+    background-image:url(../images/go.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+    color: #fff;
+    cursor: hand;
+}
+.sectionHeadingOpen {
+    background-image:url(../images/admin/info.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #98b1c4;
+    color: #fff;
+    cursor: hand;
+}
+.sectionContent {
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    background-color: red;
+}
+
+.sectionTable {
+    border-bottom: #9ACCE9 solid 1px;
+    border-left: #9ACCE9 solid 1px;
+    border-right: #9ACCE9 solid 1px;
+    border-top: #9ACCE9 solid 1px;
+    padding: 0px 0px 0px 0px;   
+    width: 100%;
+}
+
+.sectionTableHeading {
+    background: #eee;
+    border-bottom: #9ACCE9 solid 1px;
+    border-left: #9ACCE9 solid 0px;
+    border-right: #9ACCE9 solid 1px;
+    border-top: #9ACCE9 solid 0px;
+    color: #333333;
+    height: 20;
+    text-align: left;
+    width: 20%;
+    padding: 10px 10px 10px 10px;   
+}
+
+.sectionTableCellHeading {
+    font-family: arial, helvetica, sans-serif, kanji2;
+    font-size: 8pt;
+    font-weight: normal;
+    font-color: #666666;
+    padding: 10px 10px 10px 10px;
+}
+
+.sectionTableCell {
+    border-bottom: #ccc solid 0px;
+    border-left: #ccc solid 0px;
+    border-right: #ccc solid 0px;
+    border-top: #ccc solid 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.sectionTableSingleCell {
+    background-color: #fff;
+    border-bottom: #ccc solid 0px;
+    border-left: #ccc solid 0px;
+    border-right: #ccc solid 0px;
+    border-top: #ccc solid 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+
+/* -------- Table ----------------------------------------------------------------------------------------------------------*/
+.defaultTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #9ACCE9;
+    font-size : 12px;
+    font-family: "Arial";
+    float : left;
+}
+
+.defaultTable caption {
+    height: 25px;
+    border: 1px solid #9ACCE9;
+    text-align: left;
+    padding: 4px;
+    display: none;
+}
+.defaultTable th, .defaultTable td {
+    font-size : 12px;
+    font-family: "Arial";
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #9ACCE9;
+    padding: 2px;
+}
+.defaultTable th {
+    background-color: #DDEFF8;
+    font-weight : bold;
+}
+.defaultTable td {
+    font-weight : normal;
+}
+.defaultTable td a {
+    text-decoration: underline;
+}
+.defaultTable tr.odd td {
+    background-color: #eff;
+}
+
+.defaultTable tfoot tr td {
+    height: 30px;
+    font-size : 12px;
+}
+.defaultTable tfoot td {
+	text-align: center;
+}
+
+/* forms */
+.defaultForm {
+    width: 100%;
+    border-collapse: collapse;
+    border-color : #9ACCE9;
+    border-style : solid;
+    border-width : 1px;
+    padding: 0px 0px 0px 0px;
+    float : left;
+}
+
+.defaultForm th, .defaultForm td {
+    padding : 5px 5px 5px 5px;
+}
+
+.defaultForm th {
+    background-color : #eee;
+    border-bottom : 1px #9ACCE9 solid;
+    border-right : 1px #9ACCE9 solid;
+    padding-right : 10px;
+    width : 20%;
+    white-space : nowrap;
+    text-align : right;
+    font-weight : normal;
+}
+.defaultForm tr td {
+    border-left : none;
+    border-right : 1px #9ACCE9 solid;
+    border-bottom : 1px #9ACCE9 solid;
+}
+.defaultForm td {
+    font-family : arial, helvetica, sans-serif;
+    font-size : 10pt;
+}
+.defaultForm .odd td {
+    background-color : #fff;
+}
+.defaultForm .even td {
+    background-color : #eee;
+}
+.defaultForm tfoot td {
+    background-color : #EFFFFF;
+    font-size : 8pt;
+    border-right : 1px #aaa solid;
+}
+.defaultForm td td {
+    border-width : 0px;
+}
+
+/* table styles */
+
+.tableBorder
+{
+    background-color: #bbbbbb;
+}
+
+/* table row styles */
+
+.rowHover
+{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.cellHover
+{
+    background-color: #fffff0;
+    cursor: pointer;
+}
+
+.rowHeaderDark
+{
+    background-color: #bbbbbb;
+}
+
+.rowHeader
+{
+    background-color: #f0f0f0;
+}
+
+.rowNormal
+{
+    background-color: #ffffff;
+}
+
+/* normal (white) background */
+
+.rowAlternate
+{
+    background-color: #fffff0;
+}
+
+/* alternate (pale yellow) background */
+
+.rowAlternateDark
+{
+    background-color: #ffffde;
+}
+
+.rowAlternateLightGray
+{
+    background-color: #FAFAFA;
+}
+
+/* alternate (pale yellow) background */
+
+.rowHighlighted
+{
+    background-color: #eeeebb;
+}
+
+
+.label, .name {
+    background-color : #DDFFFF;
+    padding-right : 10px;
+    width : 20%;
+    white-space : nowrap;
+    text-align : right;
+}
+
+.optional {
+    font-style : italic;
+}
+
+.required {
+	font-weight : bold;
+}
+
+.info {
+    background-image : url("../images/admin/info.png");
+    background-repeat : no-repeat;
+    padding-left : 16px;
+}
+
+.centered {
+    text-algin : center;
+}
+
+.buttons {
+    clear: both;
+    padding-top : 10px;
+    text-align: center;
+}
+
+div.errors, div.message {
+    background: #f3f9fe;
+    border: 1px solid #97c0e7;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 10px auto;
+    padding: 3px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/* use a different color for the errors */
+div.errors {
+    border: 1px solid red;
+    background: #ffffcc;
+}
+
+div.errors ul {
+    list-style: url("../images/admin/error.png") inside none;
+}
+
+/* IE fix, followed by the rest of the world fix */
+li.error {
+    padding: 3px !important;
+}
+
+ul>li.error {
+    padding: 0px !important;
+}
+
+div.message p, div.message p {
+    margin-bottom: 0;
+}
+
+img.validationWarning, div.errors img.icon, div.message img.icon, li.error img.icon {
+    border: 0 !important;
+    width: 14px;
+    height: 13px;
+    vertical-align: middle;
+    margin-left: 3px;
+    background: transparent !important;
+    /* important added because some themes define div#main img */
+}
+
+div.message a {
+    background: transparent;
+    color: #0000FF;
+}
+
+div.message a:visited {
+    background: transparent;
+    color: #0000FF;
+}
+
+div.message a:hover {
+    background: transparent;
+    color: #008000;
+}
+
+div.message a:active {
+    text-decoration: underline overline;
+}
+
+div.message img.icon {
+    vertical-align: middle;
+}
+
+span.fieldError, .errorMessage {
+    color: red;
+    font-size: .95em;
+    font-weight: bold;
+    display: block;
+}
+
+/* ------ Copyright -------------------------------------------------------------------------------------------------------- */
+#footer {
+    text-align: center;
+    float : left;
+	width: 100%;
+}
+
+
+#loginbox {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    top : 50%;
+    height : 200px;
+    margin-top : -100px;
+}
+td.colHeaderLink 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+	margin : 0px;
+	padding : 2px;
+	padding-left : 10px;
+	height : 10px;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    border: 0px solid #ccc;
+    border-top: 0;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.paginateButtons a:link {
+	text-decoration: none;
+}
+.paginateButtons span {
+    padding: 2px 6px;
+}
+
+.paginateButtons span.currentStep {
+	border: 1px solid #0066CC;
+    background: #0066CC;
+	color: #fff;
+}
+
+.buttons {
+	text-align: left;
+}

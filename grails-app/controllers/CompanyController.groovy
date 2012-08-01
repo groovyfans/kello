@@ -1,0 +1,5 @@
+class CompanyController {
+
+    def index = { 
+    }
+}

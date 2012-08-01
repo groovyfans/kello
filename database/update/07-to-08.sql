@@ -1,0 +1,1 @@
+alter table k_product add column sequence int default 99;
